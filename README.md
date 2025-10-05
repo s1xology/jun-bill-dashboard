@@ -62,3 +62,7 @@ jun-bill-dashboard
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## 🔍 **Interactive Preview**
+
+<iframe width="600" height="450" src="https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34"></iframe>
