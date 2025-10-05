@@ -65,6 +65,15 @@ jun-bill-dashboard
 - Google Apps Script processes the CSV data into Google Sheets automatically.
 - Access the Google Looker Studio dashboard to visualize and analyze your expenses.
 
+## Data Refresh Frequency
+
+The data pipeline operates with the following refresh intervals to ensure timely updates while avoiding unnecessary resource consumption:
+
+- **Data to Numbers**: Real-time - Multiple entries per day as expenses occur
+- **Numbers to CSV**: Triggered 3 times daily, but executes maximum once per day
+- **CSV to Google Sheets**: Once per day at 02:00 AM via Google Apps Script trigger
+- **Google Sheets to Dashboard**: Auto-refreshes every 15 minutes in Looker Studio
+
 ## **Live Dashboard**
 
 **[View Interactive Dashboard](https://lookerstudio.google.com/s/lpO4OOx_7ao)** - Click to access the full interactive dashboard with live data filtering capabilities.
