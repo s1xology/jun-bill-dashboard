@@ -10,7 +10,7 @@ This project automates expense tracking through a complete data pipeline using A
 
 ## Why I Built This
 
-This project began as a spontaneous idea while I was studying in the US. I’ve always had the habit of tracking my expenses, but my girlfriend often pointed out that I spend money too freely. Since I’m majoring in Business Analytics, I thought: “Why not build a dashboard to show exactly where my money goes?” Sometimes, the best motivation comes from personal challenges!
+This project began as a spontaneous idea while I was studying in the US. I've always had the habit of tracking my expenses, and my girlfriend and I often discuss financial planning and budgeting together. Since I'm majoring in Business Analytics, I thought: "Why not build a dashboard to visualize exactly where my money goes?" It's a perfect opportunity to apply my technical skills to real-world financial management!
 
 ## Project Structure
 
@@ -60,18 +60,16 @@ jun-bill-dashboard
 
 ## Daily Usage Workflow
 
-- Use the Apple Shortcuts to track expenses on your iOS device.
-- The plist configuration triggers AppleScript to automatically export data to Google Drive every day.
-- Google Apps Script processes the CSV data into Google Sheets automatically.
-- Access the Google Looker Studio dashboard to visualize and analyze your expenses.
+1. Use the Apple Shortcuts to track expenses on your iOS device.
+2. The plist configuration triggers AppleScript to automatically export data to Google Drive every day.
+3. Google Apps Script processes the CSV data into Google Sheets automatically.
+4. Access the Google Looker Studio dashboard to visualize and analyze your expenses.
 
 ## Data Refresh Frequency
 
-The data pipeline operates with the following refresh intervals to ensure timely updates while avoiding unnecessary resource consumption:
-
 - **Data to Numbers**: Real-time - Multiple entries per day as expenses occur
 - **Numbers to CSV**: Triggered 3 times daily, but executes maximum once per day
-- **CSV to Google Sheets**: Once per day at 02:00 AM via Google Apps Script trigger
+- **CSV to Google Sheets**: Once per day in the morning via Google Apps Script trigger
 - **Google Sheets to Dashboard**: Auto-refreshes every 15 minutes in Looker Studio
 
 ## **Live Dashboard**
