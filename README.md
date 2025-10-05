@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[View Live Dashboard](https://lookerstudio.google.com/s/lpO4OOx_7ao)** | **[Get iOS Shortcut](https://www.icloud.com/shortcuts/066481bace81480294682ddc6d2867f2)**
+**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** | **[Get iOS Shortcut](https://www.icloud.com/shortcuts/066481bace81480294682ddc6d2867f2)**
 
 </div>
 
@@ -74,7 +74,7 @@ jun-bill-dashboard
 
 ## **Live Dashboard**
 
-**[View Interactive Dashboard](https://lookerstudio.google.com/s/lpO4OOx_7ao)** - Click to access the full interactive dashboard with live data filtering capabilities.
+**[View Interactive Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** - Click to access the full interactive dashboard with live data filtering capabilities.
 
 > **Note**: Due to certain limitations (mobile compatibility, browser restrictions, report sizing issues, etc.), bar charts and pie charts may not display properly on mobile devices. However, they work perfectly on desktop and tablet devices.
 
