@@ -55,7 +55,7 @@ jun-bill-dashboard
 1. Clone the repository to your local machine.
 2. Configure each component according to your environment (file paths, Google Drive folders, etc.).
 3. Set up the automation schedule using the provided plist file.
-4. Adjust the code based on your personal data recording habits and visualization requirements (expense categories, data fields, dashboard layout, etc.).
+4. Adjust the code based on your personal data recording habits and visualization requirements.
 5. Test each component to ensure proper functionality.
 
 ## Daily Usage Workflow
