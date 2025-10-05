@@ -59,10 +59,10 @@ jun-bill-dashboard
 - Google Apps Script processes the CSV data into Google Sheets automatically.
 - Access the Google Looker Studio dashboard to visualize and analyze your expenses.
 
+## **Live Dashboard**
+
+**[View Interactive Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** - Click to access the full interactive dashboard with live data filtering capabilities.
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## 🔍 **Interactive Preview**
-
-<iframe width="600" height="450" src="https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34"></iframe>
