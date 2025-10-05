@@ -10,22 +10,22 @@ This project started as a spontaneous idea during my studies in the US. I've alw
 
 ```
 jun-bill-dashboard
-├── 1-apple-shortcuts/                  # iOS expense tracking workflows
-│   └── README.md                       # Shortcut installation and setup guide
+├── 1-apple-shortcuts/                   
+│   └── README.md                        # iOS Shortcut workflows and share link
 ├── 2-apple-script/
-│   └── jun-bill-dashboard.scpt         # Numbers to CSV export automation
+│   └── jun-bill-dashboard.scpt          # Numbers to CSV export automation
 ├── 3-launchd/
 │   └── com.jun.jun-bill-dashboard.plist # macOS LaunchAgent configuration
 ├── 4-google-apps-script/
-│   └── jun-bill-dashboard.gs           # CSV processing and Google Sheets integration
+│   └── jun-bill-dashboard.gs            # CSV to Google Sheets processing automation
 ├── 5-google-looker-studio/
 │   └── README.md                        # Dashboard calculated fields documentation
 ├── 6-sample-logs/
-│   ├── jun-bill-dashboard.log          # Sample execution log
-│   └── jun-bill-last-export-date.txt   # Sample export date tracking
-├── .gitignore
-├── LICENSE
-└── README.md
+│   ├── jun-bill-dashboard.log           # Sample execution log
+│   └── jun-bill-last-export-date.txt    # Sample export date tracking
+├── .gitignore                           
+├── LICENSE                              
+└── README.md                            # Project documentation
 ```
 
 ## Components
