@@ -4,7 +4,7 @@ This project automates expense tracking through a complete data pipeline using A
 
 ## Why I Built This
 
-This project started as a spontaneous idea during my studies in the US. I've always had the habit of tracking my expenses, but my girlfriend complained that I spend money too freely. Since I'm studying Business Analytics, I thought: "Why not build a dashboard to show my girlfriend exactly where the money goes?" Sometimes the best motivation comes from the most personal challenges!
+This project began as a spontaneous idea while I was studying in the US. I’ve always had the habit of tracking my expenses, but my girlfriend often pointed out that I spend money too freely. Since I’m majoring in Business Analytics, I thought: “Why not build a dashboard to show exactly where my money goes?” Sometimes, the best motivation comes from personal challenges!
 
 ## Project Structure
 
