@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** | **[Get iOS Shortcut](https://www.icloud.com/shortcuts/066481bace81480294682ddc6d2867f2)**
+**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** | **[Get iOS Shortcut](https://www.icloud.com/shortcuts/f52226ed155343fbbc8cd8d846a51c7a)**
 
 </div>
 
