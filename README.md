@@ -54,28 +54,28 @@ The system operates through a complete automated data pipeline with the followin
 
 
 ```
-                     iCloud           Google Drive          Google Drive              Google Drive
+                  iCloud         Google Drive        Google Drive           Google Drive
 
-           Collect             Export            Processing              Visualization
-`Raw Data`   --->   `Numbers`   --->   `CSV File`   --->   `Google Sheets`   --->   `Looker Studio`
-         (Shortcuts)       (AppleScript+        (Apps Script)                         (Dashboard)
-                            LaunchAgent)
+         Collect           Export          Processing            Visualization
+Raw Data   --->   Numbers   --->   CSV File   --->   Google Sheets   --->   Looker Studio
+        (Shortcuts)     (AppleScript+     (Apps Script)                      (Dashboard)
+                         LaunchAgent)
 
-          Real-time         17:30-22:00           2:00 AM                Every 15 min
-                           (Once per day)          Daily                   Refresh
+         Real-time       17:30-22:00         2:00 AM              Every 15 min
+                        (Once per day)        Daily                 Refresh
 ```
 
 1. **Data Collection**: Use Apple Shortcuts to track expenses on your iOS device
-   - *Frequency*: Real-time - Multiple entries per day as expenses occur
+   - *Real-time - Multiple entries per day as expenses occur*
 
 2. **Data Export**: The plist configuration triggers AppleScript to automatically export data from Numbers to CSV and upload to Google Drive
-   - *Frequency*: Triggered 3 times daily (17:30, 21:00, 22:00), but executes maximum once per day
+   - *Triggered 3 times daily (17:30, 21:00, 22:00), but executes maximum once per day*
 
 3. **Data Processing**: Google Apps Script automatically processes the CSV data into structured Google Sheets
-   - *Frequency*: Once per day at 02:00 AM via Google Apps Script trigger
+   - *Once per day at 02:00 AM via Google Apps Script trigger*
 
 4. **Data Visualization**: Access the Google Looker Studio dashboard to visualize and analyze the expenses
-   - *Frequency*: Dashboard refreshes every 15 minutes, new data appears once per day around 02:15 AM
+   - *Dashboard refreshes every 15 minutes, new data appears once per day around 02:15 AM*
 
 ## **Live Dashboard**
 
@@ -99,8 +99,8 @@ The system operates through a complete automated data pipeline with the followin
 
 While Shortcuts can directly write data to CSV files in iCloud, I chose to first input data into Numbers for several practical reasons:
 
-1. **User-Friendly Interface**: Numbers provides a visual interface for reviewing and batch editing raw data, which raw CSV files cannot offer
-2. **Manual Editing Flexibility**: Essential for real-world scenarios:
+- **User-Friendly Interface**: Numbers provides a visual interface for reviewing and batch editing raw data, which raw CSV files cannot offer
+- **Manual Editing Flexibility**: Essential for real-world scenarios:
    - **Cash payments**: Shortcuts can only capture on-screen numbers, making manual entry necessary for cash transactions
    - **Tip adjustments**: Credit card screenshots capture pre-tip amounts, requiring manual updates to reflect actual totals
 
@@ -110,9 +110,9 @@ Numbers provides the reliability and flexibility that pure CSV automation cannot
 
 I selected Google Looker Studio for the dashboard component for several key reasons:
 
-1. **Google Ecosystem Integration**: Perfect integration with Google Sheets and Google Drive, eliminating data transfer complexity while providing excellent cloud-based user experience accessible from anywhere
-2. **Cost-Effective**: Completely free to use, making it ideal for personal expense tracking projects
-3. **Near Real-Time Updates**: Automatic data refresh capabilities that sync with Google Sheets changes (refreshes every 15 minutes)
+- **Google Ecosystem Integration**: Perfect integration with Google Sheets and Google Drive, eliminating data transfer complexity while providing excellent cloud-based user experience accessible from anywhere
+- **Cost-Effective**: Completely free to use, making it ideal for personal expense tracking projects
+- **Near Real-Time Updates**: Automatic data refresh capabilities that sync with Google Sheets changes (refreshes every 15 minutes)
 
 ## License
 
