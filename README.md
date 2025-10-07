@@ -87,13 +87,13 @@ Raw Data   --->   Numbers   --->   CSV File   --->   Google Sheets   --->   Look
 
 ## Initial Setup
 
-> **Note**: All code files have been privacy-processed, replacing personal information with placeholders (e.g., `YOUR_USERNAME`, `YOUR_GOOGLE_DRIVE_FOLDER_ID`).
-
 1. Clone the repository to your local machine.
 2. Configure each component according to your environment (file paths, Google Drive folders IDs, etc.).
 3. Set up the automation schedule using the provided plist file.
 4. Adjust the code based on your personal data recording habits and visualization requirements.
 5. Test each component to ensure proper functionality.
+
+> **Note**: All code files have been privacy-processed, replacing personal information with placeholders (e.g., `YOUR_USERNAME`, `YOUR_GOOGLE_DRIVE_FOLDER_ID`).
 
 ## FAQ
 
