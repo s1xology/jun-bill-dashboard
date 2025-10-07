@@ -95,7 +95,7 @@ Raw Data   --->   Numbers   --->   CSV File   --->   Google Sheets   --->   Look
 
 ## FAQ
 
-### <u>Why not directly use Shortcuts to write to CSV?</u>
+### ***Why not directly use Shortcuts to write to CSV?***
 
 While Shortcuts can directly write data to CSV files in iCloud, I chose to first input data into Numbers for several practical reasons:
 
@@ -106,7 +106,7 @@ While Shortcuts can directly write data to CSV files in iCloud, I chose to first
 
 Numbers provides the reliability and flexibility that pure CSV automation cannot match.
 
-### <u>Why choose Google Looker Studio for visualization?</u>
+### ***Why choose Google Looker Studio for visualization?***
 
 I selected Google Looker Studio for the dashboard component for several key reasons:
 
