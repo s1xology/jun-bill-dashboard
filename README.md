@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** | **[Get iOS Shortcut](https://www.icloud.com/shortcuts/f52226ed155343fbbc8cd8d846a51c7a)**
+**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)**  |  **[Get iOS Shortcut](https://www.icloud.com/shortcuts/f52226ed155343fbbc8cd8d846a51c7a)**
 
 </div>
 
@@ -101,8 +101,8 @@ While Shortcuts can directly write data to CSV files in iCloud, I chose to first
 
 - **User-Friendly Interface**: Numbers provides a visual interface for reviewing and batch editing raw data, which raw CSV files cannot offer
 - **Manual Editing Flexibility**: Essential for real-world scenarios:
-   - **Cash payments**: Shortcuts can only capture on-screen numbers, making manual entry necessary for cash transactions
-   - **Tip adjustments**: Credit card screenshots capture pre-tip amounts, requiring manual updates to reflect actual totals
+   - **`Cash payments`**: Shortcuts can only capture on-screen numbers, making manual entry necessary for cash transactions
+   - **`Tip adjustments`**: Credit card screenshots capture pre-tip amounts, requiring manual updates to reflect actual totals
 
 Numbers provides the reliability and flexibility that pure CSV automation cannot match.
 
