@@ -44,7 +44,7 @@ jun-bill-dashboard
 
 4. **`Google Apps Script`**: Automatically processes and transforms CSV data from Google Drive into structured Google Sheets. Implements category mapping logic to create aggregated expense categories, dynamically inserts calculated columns, and maintains dual sheet layouts with different header configurations for flexible data analysis.
 
-5. **`Google Looker Studio`**: Visualizes the processed data in a dashboard format. Includes documentation of calculated fields creation process. (The dashboard link is available both at the top and here for your convenience.)
+5. **`Google Looker Studio`**: Visualizes the processed data in a dashboard format. Includes documentation of calculated fields creation process. (The dashboard link is provided at the top and in the Live Dashboard section for your convenience.)
 
 6. **`Sample Logs`**: Contains sample output files that demonstrate the project's functionality and serve as examples of the automated system's output. Includes `jun-bill-dashboard.log` showing execution history with timestamps (successful exports and skipped runs based on scheduling logic), and `jun-bill-last-export-date.txt` tracking the most recent export date to prevent duplicate processing.
 
