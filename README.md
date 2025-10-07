@@ -82,6 +82,7 @@ Raw Data   --->   Numbers   --->   CSV File   --->   Google Sheets   --->   Look
 **[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)** - Click to access the full interactive dashboard with live data filtering capabilities.
 
 > **Note**: Due to certain limitations (mobile compatibility, browser restrictions, report sizing issues, etc.), bar charts and pie charts may not display properly on mobile devices. However, they work perfectly on desktop and tablet devices.
+> **Manual Timestamp Limitation**: Manually added records only include the date (year-month-day), whereas Shortcut-automated entries capture the full timestamp (year-month-day hour:minute:second); as a result, records within the same day may not reflect their true chronological order in the dashboard. This is a trade-off between data collection convenience and analytical precision.
 
 ## Initial Setup
 
@@ -103,6 +104,7 @@ While Shortcuts can directly write data to CSV files in iCloud, I chose to first
 2. **Manual Editing Flexibility**: Essential for real-world scenarios:
       - **`Cash payments`**: Shortcuts can only capture on-screen numbers, making manual entry necessary for cash transactions
       - **`Tip adjustments`**: Credit card screenshots capture pre-tip amounts, requiring manual updates to reflect actual totals
+      - **`Rebates or reimbursements (checks)`**: Any rebates or reimbursements received as checks require manual entry, since these transactions are not captured by automated workflows
 
 Numbers provides the reliability and flexibility that pure CSV automation cannot match.
 
