@@ -64,35 +64,12 @@ CASE
 END
 ```
 
-### 3. Filtered_Amount_Abs
-**Purpose**: Converts filtered amounts to absolute values specifically for pie chart visualization. Since pie charts cannot handle negative values properly but are essential for expense proportion analysis in my dashboard, this field ensures all amounts are positive while maintaining the filtered time period logic.
+### 3. Pos_Sum_Filtered_Amount
+**Purpose**: Sums filtered amounts specifically for pie chart visualization. Since pie charts cannot display both positive and negative values together, this field ensures all amounts are positive while maintaining the filtered time period logic. If a category's value is negative in the selected time period (Time_Period), it will be excluded from the pie chart.
 **Data Type**: Currency
 ```
-ABS(
-  CASE
-    WHEN Time_Period = "Grand Total" THEN Amount
-  
-    WHEN Time_Period = "Year to Date" 
-         AND YEAR(Date) = YEAR(TODAY()) THEN Amount
-
-    WHEN Time_Period = "Month to Date" 
-         AND MONTH(Date) = MONTH(TODAY()) 
-         AND YEAR(Date) = YEAR(TODAY()) THEN Amount
-
-    WHEN Time_Period = "Last Year"
-         AND YEAR(Date) = YEAR(TODAY()) - 1 THEN Amount
-  
-    WHEN Time_Period = "Last Month" 
-         AND MONTH(TODAY()) > 1 
-         AND MONTH(Date) = MONTH(TODAY()) - 1 
-         AND YEAR(Date) = YEAR(TODAY()) THEN Amount
-  
-    WHEN Time_Period = "Last Month" 
-         AND MONTH(TODAY()) = 1 
-         AND MONTH(Date) = 12 
-         AND YEAR(Date) = YEAR(TODAY()) - 1 THEN Amount
-  
-    ELSE 0
-  END
-)
+CASE
+  WHEN SUM(Filtered_Amount) > 0 THEN SUM(Filtered_Amount)
+  ELSE 0
+END
 ```
