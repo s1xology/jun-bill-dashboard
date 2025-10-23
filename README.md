@@ -54,11 +54,11 @@ The system operates through a complete automated data pipeline with the followin
 
 
 ```
-                    iCloud           Google Drive          Google Drive             Google Drive
+                    iCloud           Google Drive          Google Drive           Google Drive
 
-          Extract              Load              Transform              Visualization
-Raw Data   ----->   Numbers   ----->   CSV File   ----->   Google Sheets   ----->   Looker Studio
-          (Apple           (AppleScript+          (Google                            (Dashboard)
+          Extract              Load              Transform             Visualization
+Raw Data   ----->   Numbers   ----->   CSV File   ----->   Google Sheets  ----->  Looker Studio
+          (Apple           (AppleScript+          (Google                          (Dashboard)
          Shortcuts)         LaunchAgent)        Apps Script)
 
          Real-time          17:30-22:00           2:00 AM               Every 15 min
