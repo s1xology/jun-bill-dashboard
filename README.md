@@ -56,10 +56,10 @@ The system operates through a complete automated data pipeline with the followin
 ```
                   iCloud         Google Drive        Google Drive           Google Drive
 
-         Collect           Export          Processing            Visualization
-Raw Data   --->   Numbers   --->   CSV File   --->   Google Sheets   --->   Looker Studio
-        (Shortcuts)     (AppleScript+     (Apps Script)                      (Dashboard)
-                         LaunchAgent)
+          Extract           Load            Transform            Visualization
+Raw Data  ----->  Numbers  ----->  CSV File  ----->  Google Sheets  ---->  Looker Studio
+          (Apple       (AppleScript+      (Google Apps                      (Dashboard)
+         Shortcuts)     LaunchAgent)         Script)
 
          Real-time       17:30-22:00         2:00 AM              Every 15 min
                         (Once per day)        Daily                 Refresh
