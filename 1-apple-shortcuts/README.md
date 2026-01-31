@@ -12,4 +12,4 @@ These features perfectly correspond to the four columns of structured data you'l
 
 ## Share Link
 
-Download the shortcut via iCloud link: [AutoLedger Shortcut](https://www.icloud.com/shortcuts/f52226ed155343fbbc8cd8d846a51c7a)
+Download the shortcut via iCloud link: [AutoLedger Shortcut](https://www.icloud.com/shortcuts/34e8b4e5021e4e28a244b4203a1d275a)

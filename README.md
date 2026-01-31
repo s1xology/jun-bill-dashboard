@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)**  |  **[Get iOS Shortcut](https://www.icloud.com/shortcuts/f52226ed155343fbbc8cd8d846a51c7a)**
+**[View Live Dashboard](https://lookerstudio.google.com/reporting/6f470c98-84ab-4fd8-844c-f397e2b9bd34)**  |  **[Get iOS Shortcut](https://www.icloud.com/shortcuts/34e8b4e5021e4e28a244b4203a1d275a)**
 
 </div>
 
@@ -19,9 +19,11 @@ jun-bill-dashboard
 ├── 1-apple-shortcuts/                   
 │   └── README.md                        # iOS Shortcut workflows and share link
 ├── 2-apple-script/
-│   └── jun-bill-dashboard.scpt          # Numbers to CSV export automation
+│   ├── jun-bill-dashboard.scpt          # Numbers to CSV export automation
+│   └── jun-bill-dashboard-log-rotation.scpt # Log rotation automation
 ├── 3-launchd/
-│   └── com.jun.jun-bill-dashboard.plist # macOS LaunchAgent configuration
+│   ├── com.jun.jun-bill-dashboard.plist # macOS LaunchAgent for CSV export
+│   └── com.jun.jun-bill-dashboard-log-rotation.plist # macOS LaunchAgent for log rotation
 ├── 4-google-apps-script/
 │   └── jun-bill-dashboard.gs            # CSV to Google Sheets processing automation
 ├── 5-google-looker-studio/
@@ -38,9 +40,9 @@ jun-bill-dashboard
 
 1. **`Apple Shortcuts`**: Provides convenient expense tracking on iPhone, allowing quick data entry and automatic categorization through iOS automation workflows.
 
-2. **`AppleScript`**: Automates the export of expense data from Numbers to CSV format and uploads to Google Drive. Includes error handling, logging functionality, and manages the complete export workflow from opening the document to saving the output file. Features duplicate prevention logic that tracks the last export date to avoid multiple executions on the same day.
+2. **`AppleScript`**: Automates the export of expense data from Numbers to CSV format and uploads to Google Drive. Includes error handling, logging functionality, and manages the complete export workflow from opening the document to saving the output file. Features duplicate prevention logic that tracks the last export date to avoid multiple executions on the same day. Also includes a log rotation script that maintains the log file at a manageable size by keeping only the last 150 entries (approximately 1 month of history).
 
-3. **`LaunchAgent`**: Enables the AppleScript to run automatically on a daily schedule without manual intervention. Uses macOS LaunchAgent to trigger the export process at specific times (17:30, 21:00, 22:00) each day, ensuring consistent data synchronization.
+3. **`LaunchAgent`**: Enables the AppleScript to run automatically on a daily schedule without manual intervention. Uses macOS LaunchAgent to trigger the export process at specific times (17:30, 21:00, 22:00) each day, ensuring consistent data synchronization. A separate LaunchAgent handles log rotation daily at 00:05 to prevent unlimited log file growth.
 
 4. **`Google Apps Script`**: Automatically processes and transforms CSV data from Google Drive into structured Google Sheets. Implements category mapping logic to create aggregated expense categories, dynamically inserts calculated columns, and maintains dual sheet layouts with different header configurations for flexible data analysis.
 
