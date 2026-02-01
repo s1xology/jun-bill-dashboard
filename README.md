@@ -34,6 +34,7 @@ jun-bill-dashboard
 ├── .gitignore                           
 ├── LICENSE                              
 └── README.md                              # Project documentation
+```
 
 ## Runtime File Structure (Not in Repository)
 
@@ -58,7 +59,7 @@ iCloud Drive/Script Editor/jun-bill-dashboard/
 ```
 
 > **Note**: "iCloud Drive/Script Editor/" refers to `~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/` in the file system. Log and status files are stored outside iCloud to avoid LaunchAgent sandbox permission issues. Symbolic links in the iCloud directory provide convenient access to these files.
-```
+
 
 ## Components
 
