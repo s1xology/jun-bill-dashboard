@@ -36,7 +36,7 @@ jun-bill-dashboard
 └── README.md                              # Project documentation
 ```
 
-## Runtime File Structure (Not in Repository)
+## Runtime File Structure (After Setup)
 
 The actual runtime files are stored in macOS standard directories:
 
