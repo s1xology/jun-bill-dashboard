@@ -58,7 +58,7 @@ iCloud Drive/Script Editor/jun-bill-dashboard/
 └── last-export.txt
 ```
 
-> **Note**: "iCloud Drive/Script Editor/" refers to `~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/` in the file system. Log and status files are stored outside iCloud to avoid LaunchAgent sandbox permission issues. Symbolic links in the iCloud directory provide convenient access to these files.
+> **Note**: `iCloud Drive/Script Editor/` refers to `/Users/YOUR_USERNAME/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/` in the file system. Log and status files are stored outside iCloud to avoid LaunchAgent sandbox permission issues. Symbolic links in the iCloud directory provide convenient access to these files.
 
 
 ## Components
@@ -126,7 +126,7 @@ Raw Data  ----->   Numbers   ----->   CSV File   ----->   Google Sheets  -----> 
    mkdir -p ~/Library/Application\ Support/jun-bill-dashboard
    mkdir -p ~/Library/Logs/jun-bill-dashboard
    ```
-5. Copy AppleScript files to iCloud Drive (or another local location like `~/Library/Application\ Scripts/` if you prefer):
+5. Copy AppleScript files to iCloud Drive (or another local location like `~/Library/Application Scripts/` if you prefer):
    ```bash
    cp 2-apple-script/*.scpt ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/
    ```
@@ -143,7 +143,7 @@ Raw Data  ----->   Numbers   ----->   CSV File   ----->   Google Sheets  -----> 
 
 > **Note**: All code files use placeholders (e.g., `YOUR_USERNAME`, `YOUR_GOOGLE_DRIVE_FOLDER_ID`) for privacy.
 
-> **Important**: Log and status files are stored in `~/Library/Application Support` and `~/Library/Logs` to avoid LaunchAgent sandbox permission issues with iCloud Drive. Symbolic links can optionally be created alongside the AppleScript files in iCloud for convenient access.
+> **Important**: Log and status files are stored in `~/Library/Logs` and `~/Library/Application Support` to avoid LaunchAgent sandbox permission issues with iCloud Drive. Symbolic links can optionally be created alongside the AppleScript files in iCloud for convenient access.
 
 ## FAQ
 
