@@ -9,23 +9,23 @@ Previously, log and status files were stored in iCloud Drive (`~/Library/Mobile 
 ### Old Structure (Before)
 ```
 ~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/
-├── jun-bill-dashboard.scpt
-├── jun-bill-dashboard-log-rotation.scpt
-├── jun-bill-dashboard.log                    ← Moved
-└── jun-bill-last-export-date.txt             ← Moved & Renamed
+├── export.scpt
+├── log-rotate.scpt
+├── activity.log                              ← Moved
+└── last-export.txt                           ← Moved & Renamed
 ```
 
 ### New Structure (After)
 ```
 ~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/
-├── jun-bill-dashboard.scpt                   ← Updated paths
-└── jun-bill-dashboard-log-rotation.scpt      ← Updated paths
+├── export.scpt                               ← Updated paths
+└── log-rotate.scpt                           ← Updated paths
 
 ~/Library/Application Support/jun-bill-dashboard/
-└── last-export-date.txt                      ← New location (renamed)
+└── last-export.txt                           ← New location (renamed)
 
 ~/Library/Logs/jun-bill-dashboard/
-└── jun-bill-dashboard.log                    ← New location
+└── activity.log                              ← New location
 ```
 
 ## Migration Steps
@@ -33,8 +33,8 @@ Previously, log and status files were stored in iCloud Drive (`~/Library/Mobile 
 ### 1. Stop Running LaunchAgents
 
 ```bash
-launchctl unload ~/Library/LaunchAgents/com.jun.jun-bill-dashboard.plist
-launchctl unload ~/Library/LaunchAgents/com.jun.jun-bill-dashboard-log-rotation.plist
+launchctl unload ~/Library/LaunchAgents/com.jun.billdashboard.export.plist
+launchctl unload ~/Library/LaunchAgents/com.jun.billdashboard.log-rotate.plist
 ```
 
 ### 2. Create New Directories
@@ -50,20 +50,20 @@ If you want to preserve your existing log history and status:
 
 ```bash
 # Migrate log file
-cp ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-dashboard.log \
-   ~/Library/Logs/jun-bill-dashboard/jun-bill-dashboard.log
+cp ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/activity.log \
+   ~/Library/Logs/jun-bill-dashboard/activity.log
 
 # Migrate status file (note the rename)
-cp ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-last-export-date.txt \
-   ~/Library/Application\ Support/jun-bill-dashboard/last-export-date.txt
+cp ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/last-export.txt \
+   ~/Library/Application\ Support/jun-bill-dashboard/last-export.txt
 ```
 
 ### 4. Update AppleScript Files in iCloud
 
 Replace your existing `.scpt` files in iCloud with the updated versions from this repository:
 
-- `2-apple-script/jun-bill-dashboard.scpt`
-- `2-apple-script/jun-bill-dashboard-log-rotation.scpt`
+- `2-apple-script/export.scpt`
+- `2-apple-script/log-rotate.scpt`
 
 **Important**: Don't forget to replace placeholders:
 - `YOUR_USERNAME` → Your actual macOS username
@@ -73,8 +73,8 @@ Replace your existing `.scpt` files in iCloud with the updated versions from thi
 Replace your existing plist files in `~/Library/LaunchAgents/` with updated versions:
 
 ```bash
-cp 3-launchd/com.jun.jun-bill-dashboard.plist ~/Library/LaunchAgents/
-cp 3-launchd/com.jun.jun-bill-dashboard-log-rotation.plist ~/Library/LaunchAgents/
+cp 3-launchd/com.jun.billdashboard.export.plist ~/Library/LaunchAgents/
+cp 3-launchd/com.jun.billdashboard.log-rotate.plist ~/Library/LaunchAgents/
 ```
 
 **Important**: Replace `YOUR_USERNAME` with your actual username in both files.
@@ -82,18 +82,18 @@ cp 3-launchd/com.jun.jun-bill-dashboard-log-rotation.plist ~/Library/LaunchAgent
 ### 6. Reload LaunchAgents
 
 ```bash
-launchctl load ~/Library/LaunchAgents/com.jun.jun-bill-dashboard.plist
-launchctl load ~/Library/LaunchAgents/com.jun.jun-bill-dashboard-log-rotation.plist
+launchctl load ~/Library/LaunchAgents/com.jun.billdashboard.export.plist
+launchctl load ~/Library/LaunchAgents/com.jun.billdashboard.log-rotate.plist
 ```
 
 ### 7. Test the Setup
 
 ```bash
 # Check if agents are loaded
-launchctl list | grep jun-bill-dashboard
+launchctl list | grep billdashboard
 
 # Monitor logs in real-time
-tail -f ~/Library/Logs/jun-bill-dashboard/jun-bill-dashboard.log
+tail -f ~/Library/Logs/jun-bill-dashboard/activity.log
 
 # Check for errors in system log
 log show --predicate 'eventMessage contains "jun-bill-dashboard"' --last 10m
@@ -105,8 +105,8 @@ After confirming everything works, you can remove old files from iCloud:
 
 ```bash
 # Remove old log and status files from iCloud
-rm ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-dashboard.log
-rm ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-last-export-date.txt
+rm ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/activity.log
+rm ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/last-export.txt
 ```
 
 ## Troubleshooting

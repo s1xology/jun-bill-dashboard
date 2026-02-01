@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>jun-bill-dashboard-log-rotation</string>
+    <string>com.jun.billdashboard.log-rotate</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/osascript</string>
-        <string>/Users/YOUR_USERNAME/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-dashboard-log-rotation.scpt</string>
+        <string>/Users/YOUR_USERNAME/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/log-rotate.scpt</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -18,9 +18,9 @@
     </dict>
 
     <key>StandardOutPath</key>
-    <string>/Users/YOUR_USERNAME/Library/Logs/jun-bill-dashboard/jun-bill-dashboard.log</string>
+    <string>/Users/YOUR_USERNAME/Library/Logs/jun-bill-dashboard/activity.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/YOUR_USERNAME/Library/Logs/jun-bill-dashboard/jun-bill-dashboard.log</string>
+    <string>/Users/YOUR_USERNAME/Library/Logs/jun-bill-dashboard/activity.log</string>
 
     <key>RunAtLoad</key>
     <true/>

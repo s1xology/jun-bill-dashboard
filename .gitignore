@@ -10,11 +10,11 @@ Thumbs.db
 # Personal privacy files (actual logs and data)
 # These files are now stored in ~/Library/Application Support and ~/Library/Logs
 *.log
-jun-bill-last-export-date.txt
+last-export.txt
 
 # But keep sample files for demonstration
-!6-sample-logs/jun-bill-dashboard.log
-!6-sample-logs/jun-bill-last-export-date.txt
+!6-sample-logs/activity.log
+!6-sample-logs/last-export.txt
 
 # Temporary files
 *.tmp
