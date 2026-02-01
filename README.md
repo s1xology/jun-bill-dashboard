@@ -34,6 +34,24 @@ jun-bill-dashboard
 ├── .gitignore                           
 ├── LICENSE                              
 └── README.md                        # Project documentation
+
+## Runtime File Structure (Not in Repository)
+
+The actual runtime files are stored in macOS standard directories:
+
+```
+~/Library/Application Support/jun-bill-dashboard/
+└── last-export-date.txt              # Tracks last export date to prevent duplicates
+
+~/Library/Logs/jun-bill-dashboard/
+└── jun-bill-dashboard.log            # Execution log (rotated to keep last 150 entries)
+
+~/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/
+├── jun-bill-dashboard.scpt           # Main export script (iCloud synced)
+└── jun-bill-dashboard-log-rotation.scpt  # Log rotation script (iCloud synced)
+```
+
+> **Note**: Log and status files are stored outside iCloud to avoid LaunchAgent sandbox permission issues.
 ```
 
 ## Components
@@ -90,12 +108,22 @@ Raw Data  ----->   Numbers   ----->   CSV File   ----->   Google Sheets  -----> 
 ## Initial Setup
 
 1. Clone the repository to your local machine.
-2. Configure each component according to your environment (file paths, Google Drive folders IDs, etc.).
-3. Set up the automation schedule using the provided plist file.
-4. Adjust the code based on your personal data recording habits and visualization requirements.
-5. Test each component to ensure proper functionality.
+2. Configure each component according to your environment:
+   - Replace `YOUR_USERNAME` with your actual macOS username
+   - Replace `YOUR_EMAIL@gmail.com` with your Google account email
+   - Replace `YOUR_GOOGLE_DRIVE_FOLDER_ID` and `YOUR_GOOGLE_SHEET_ID` in Google Apps Script
+3. Create required directories:
+   ```bash
+   mkdir -p ~/Library/Application\ Support/jun-bill-dashboard
+   mkdir -p ~/Library/Logs/jun-bill-dashboard
+   ```
+4. Copy AppleScript files to iCloud Drive and configure LaunchAgent
+5. Set up the automation schedule using the provided plist files
+6. Test each component to ensure proper functionality
 
-> **Note**: All code files have been privacy-processed, replacing personal information with placeholders (e.g., `YOUR_USERNAME`, `YOUR_GOOGLE_DRIVE_FOLDER_ID`).
+> **Note**: All code files use placeholders (e.g., `YOUR_USERNAME`, `YOUR_GOOGLE_DRIVE_FOLDER_ID`) for privacy.
+
+> **Important**: Log and status files are stored in `~/Library/Application Support` and `~/Library/Logs` to avoid LaunchAgent sandbox permission issues with iCloud Drive.
 
 ## FAQ
 

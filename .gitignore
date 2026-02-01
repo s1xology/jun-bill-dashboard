@@ -8,6 +8,7 @@ ehthumbs.db
 Thumbs.db
 
 # Personal privacy files (actual logs and data)
+# These files are now stored in ~/Library/Application Support and ~/Library/Logs
 *.log
 jun-bill-last-export-date.txt
 

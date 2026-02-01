@@ -13,7 +13,11 @@
 -- Configuration
 set numbersFile to "/Users/YOUR_USERNAME/Library/Mobile Documents/com~apple~Numbers/Documents/jun-bill-dashboard/jun-bill.numbers"
 set exportCSV to "/Users/YOUR_USERNAME/Library/CloudStorage/GoogleDrive-YOUR_EMAIL@gmail.com/My Drive/jun-bill-dashboard/jun-bill-dashboard.csv"
-set statusFile to "/Users/YOUR_USERNAME/Library/Mobile Documents/com~apple~ScriptEditor2/Documents/jun-bill-dashboard/jun-bill-last-export-date.txt"
+set statusFile to "/Users/YOUR_USERNAME/Library/Application Support/jun-bill-dashboard/last-export-date.txt"
+set appSupportDir to "/Users/YOUR_USERNAME/Library/Application Support/jun-bill-dashboard"
+
+-- Ensure Application Support directory exists
+do shell script "mkdir -p " & quoted form of appSupportDir
 
 -- Get today's date as "YYYY-MM-DD"
 set currentDate to (current date)
