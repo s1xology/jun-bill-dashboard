@@ -1,47 +1,24 @@
-# macOS system files
+# macOS
 .DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
 
-# Personal privacy files (actual logs and data)
+# Personal data (stored in ~/Library/, not in repo)
 *.log
-jun-bill-last-export-date.txt
-
-# But keep sample files for demonstration
-!6-sample-logs/jun-bill-dashboard.log
-!6-sample-logs/jun-bill-last-export-date.txt
+last-export.txt
+!6-sample-logs/*.log
+!6-sample-logs/last-export.txt
 
 # Temporary files
 *.tmp
-*.temp
 *~
 
-# IDE and editor files
+# IDE
 .vscode/
 .idea/
 *.swp
-*.swo
 
-# Numbers backup files
+# Backup files
 *.numbers~
-
-# Google Drive sync files
-*.gdoc
-*.gsheet
-
-# Personal configuration files
-config.local.*
-secrets.*
-
-# Node.js related (if added in future)
-node_modules/
-npm-debug.log*
-
-# Compiled files
-*.o
-*.so
-*.dylib
+*~.scpt
