@@ -13,6 +13,8 @@ This file documents the custom calculated fields and parameters I created for th
 - Last Month  
 - Year to Date
 - Last Year
+- Last 3 Months
+- Last 6 Months (Default)
 - Grand Total
 
 ## Calculated Fields
@@ -59,6 +61,20 @@ CASE
        AND MONTH(TODAY()) = 1 
        AND MONTH(Date) = 12 
        AND YEAR(Date) = YEAR(TODAY()) - 1 THEN Amount
+
+  WHEN Time_Period = "Last 3 Months"
+       AND (
+       (YEAR(Date) = YEAR(TODAY()) AND MONTH(Date) >= MONTH(TODAY()) - 2)
+       OR
+       (YEAR(Date) = YEAR(TODAY()) - 1 AND MONTH(Date) > MONTH(TODAY()) + 9)
+       ) THEN Amount
+
+  WHEN Time_Period = "Last 6 Months"
+       AND (
+       (YEAR(Date) = YEAR(TODAY()) AND MONTH(Date) >= MONTH(TODAY()) - 5)
+       OR
+       (YEAR(Date) = YEAR(TODAY()) - 1 AND MONTH(Date) > MONTH(TODAY()) + 6)
+       ) THEN Amount
 
   ELSE 0
 END
