@@ -8,6 +8,7 @@ This file documents the custom calculated fields and parameters I created for th
 
 ### Time_Period
 **Purpose**: Enables flexible time window analysis for expense tracking, supporting common financial reporting periods and comparative analysis between current vs. historical spending patterns.
+
 **Data Type**: Text (List)
 - Month to Date
 - Last Month  
@@ -21,6 +22,7 @@ This file documents the custom calculated fields and parameters I created for th
 
 ### 1. Category_7_Order
 **Purpose**: Creates a custom ordering field for dashboard category controls. Since Looker Studio's default list ordering isn't user-friendly, this field ensures categories appear in a logical sequence (food → shopping → rent → transport → medical → tuition → others) when used in dropdown filters and chart displays.
+
 **Data Type**: Number
 ```
 CASE
@@ -37,6 +39,7 @@ END
 
 ### 2. Filtered_Amount
 **Purpose**: Filters amount based on selected time period parameter.
+
 **Data Type**: Currency
 ```
 CASE
@@ -82,6 +85,7 @@ END
 
 ### 3. Pos_Sum_Filtered_Amount
 **Purpose**: Sums filtered amounts specifically for pie chart visualization. Since pie charts cannot display both positive and negative values together, this field ensures all amounts are positive while maintaining the filtered time period logic. If a category's value is negative in the selected time period (Time_Period), it will be excluded from the pie chart.
+
 **Data Type**: Currency
 ```
 CASE
