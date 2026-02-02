@@ -1,4 +1,4 @@
--- For reference only: This .txt file is identical to the .scpt file with the same name.
+-- For reference only: This .applescript file is identical to the .scpt file with the same name.
 -- Author: Zhengjun An
 -- Created: 2025-10-04
 -- Last Modified: 2026-01-31
