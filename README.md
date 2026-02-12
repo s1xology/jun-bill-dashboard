@@ -31,8 +31,8 @@ jun-bill-dashboard
 ├── 6-sample-logs/
 │   ├── activity.log                       # Sample execution log - by AppleScript
 │   └── last-export.txt                    # Sample last export date - by AppleScript
-├── CHANGELOG.md                           # Version history and updates
 ├── .gitignore                           
+├── CHANGELOG.md                           # Version history and updates
 ├── LICENSE                              
 └── README.md                              # Project documentation
 ```
